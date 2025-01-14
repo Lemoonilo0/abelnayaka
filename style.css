@@ -1,0 +1,312 @@
+/* Modern CSS with Purple Theme */
+:root {
+    --primary-purple: #7c3aed;
+    --secondary-purple: #a855f7;
+    --light-purple: #e9d5ff;
+    --dark-purple: #6b21a8;
+    --gradient-purple: linear-gradient(135deg, var(--primary-purple), var(--secondary-purple));
+    --background: #f8f7ff;
+    --text-primary: #2d3748;
+    --text-secondary: #4a5568;
+    --white: #ffffff;
+    --shadow-sm: 0 4px 6px rgba(124, 58, 237, 0.1);
+    --shadow-md: 0 6px 12px rgba(124, 58, 237, 0.15);
+    --shadow-lg: 0 10px 20px rgba(124, 58, 237, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Modern Navigation */
+nav {
+    background: var(--gradient-purple);
+    padding: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 1.1rem;
+    backdrop-filter: blur(5px);
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Container and General Styles */
+.container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+/* Material Section */
+.material-card {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.3s ease;
+}
+
+.material-card:hover {
+    transform: translateY(-5px);
+}
+
+.material-card h2 {
+    color: var(--primary-purple);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.section-block {
+    margin: 2rem 0;
+}
+
+.section-block h3 {
+    color: var(--dark-purple);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-list {
+    list-style: none;
+}
+
+/* Section Styling */
+.container {
+    margin-top: 4rem;
+}
+
+/* Video Wrapper */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+/* Assignments Grid */
+.assignments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.assignment-card {
+    background: linear-gradient(145deg, #7c3aed, #c084fc);
+    color: white;
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.assignment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.assignment-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.submit-btn {
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    margin-top: 1rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: var(--color-primary-dark);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .video-wrapper iframe {
+        height: 300px;
+    }
+
+    .assignments-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.feature-list li {
+    margin: 1rem 0;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.feature-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary-purple);
+}
+
+/* Assignments Section */
+.assignments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.assignment-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.assignment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.assignment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.assignment-header h3 {
+    font-size: 1.5rem;
+    color: var(--primary-purple);
+}
+
+.assignment-header .due-date {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.submit-btn {
+    background: var(--gradient-purple);
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Team Section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.team-icon {
+    font-size: 3rem;
+    color: var(--primary-purple);
+    margin-bottom: 1rem;
+}
+
+.team-card h3 {
+    font-size: 1.25rem;
+    color: var(--dark-purple);
+    margin-bottom: 0.5rem;
+}
+
+.team-card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .material-card {
+        padding: 1.5rem;
+    }
+
+    .material-card h2 {
+        font-size: 2rem;
+    }
+
+    .assignments-grid {
+        grid-template-columns: 1fr;
+    }
+}
